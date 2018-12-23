@@ -20,5 +20,10 @@ Route::get('/', function () {
 });
 
 Route::get('blogTemplate', function () {
+    return view('webUserView.blogList');
+});
+
+
+Route::get('blog1', function () {
     return view('webUserView.blog');
 });
