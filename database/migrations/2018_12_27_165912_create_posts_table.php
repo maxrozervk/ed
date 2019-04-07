@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreatePostsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->increments('post_id');
+            $table->string('post_title')->nullable();
+            $table->string('post_subtitle')->nullable();
+            $table->string('post_slug')->nullable();
+            $table->string('post_image')->nullable();
+            $table->text('post_data')->nullable();
+            $table->boolean('post_status')->nullable();
+            $table->boolean('post_meta_description')->nullable();
+            $table->boolean('post_meta_description')->nullable();
+            $table->boolean('post_meta_image')->nullable();
+            $table->boolean('post_meta_cannonical')->nullable();
+            $table->boolean('post_meta_robotsFollow')->nullable();
+            $table->boolean('post_meta_robotsIndex')->nullable();
+            $table->string('post_user_id')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('posts');
+    }
+}

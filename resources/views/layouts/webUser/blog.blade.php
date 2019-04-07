@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  @include('inc.webUser.head')
+  @include('webUserView.inc.head')
+  @include('webUserView.inc.meta')
+  @include('webUserView.inc.script')
 </head>
 <body>
 
-@include('inc.webUser.navMenu')
+@include('webUserView.inc.navMenu')
 
 <div class="container-fluid">
   <div class="row">
@@ -47,7 +49,7 @@
   </div>
   <!-- ./Content -->
   <!-- Footer -->
-  @include('inc.webUser.footer')
+  @include('webUserView.inc.footer')
   <!-- ./Footer -->
 </div>
 
