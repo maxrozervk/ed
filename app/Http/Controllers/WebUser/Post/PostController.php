@@ -27,7 +27,7 @@ class PostController extends Controller
     {
         // return $post_slug;
 
-        $data['post']=post::where('post_status','1')->get();
+        $data['post']=post::where('post_publish_status','1')->get();
         return view('webUserView.blogList',compact('data'));
     }
 

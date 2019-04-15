@@ -38,6 +38,7 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        // return $request->all();
         //
         // return request()->all();
         // $post=Post::create([
@@ -55,7 +56,11 @@ class PostController extends Controller
         $post->post_slug=$request->postSlug;
         $post->post_image=$request->postImage;
         $post->post_data=$request->postData;
-        $post->post_status=$request->postStatus;
+        $post->post_publish_status=$request->postStatus;
+        $post->post_meta_description=$request->postMetaDescription;
+        $post->post_meta_cannonical=$request->postMetaCannonical;
+        $post->post_meta_robotsFollow=$request->postRobotFollow;
+        $post->post_meta_robotsIndex=$request->postRobotIndex;
         $post->post_user_id=$request->user()->id;
 
         // $post->tags()->sync($request->postTag);

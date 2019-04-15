@@ -42,30 +42,71 @@
           </div> --}}
         </div>
           {{-- Card Body --}}
-          <div class="card-body">
-            <div class="form-group">
-              <label for="postTitle">Post Title</label>
-              <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
-              <input type="text" class="form-control form-control-sm" id="postTitle" name="postTitle" placeholder="Post Title">
-            </div>
-            <div class="form-group">
-              <label for="postSubTitle">Post Sub-title</label>
-              <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
-              <input type="text" class="form-control form-control-sm" id="postSubTitle" name="postSubTitle" placeholder="Post Sub-title">
-            </div>
-
-            <div class="form-group">
-              <label for="postSlug">Post Slug</label>
-              <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
-              <input type="text" class="form-control form-control-sm" id="postSlug" name="postSlug" placeholder="Post Slug">
-            </div>
-
-            {{-- Row --}}
-            <div class="row">
-              
-              <div class="col-sm-6">
+          {{-- ROw 1 --}}
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="postTitle">Post Title</label>
+                  <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
+                  <input type="text" class="form-control form-control-sm" id="postTitle" name="postTitle" placeholder="Post Title">
+                </div>
+                <div class="form-group">
+                  <label for="postSubTitle">Post Sub-title</label>
+                  <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
+                  <input type="text" class="form-control form-control-sm" id="postSubTitle" name="postSubTitle" placeholder="Post Sub-title">
+                </div>
 
                 <div class="form-group">
+                  <label for="postSlug">Post Slug</label>
+                  <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
+                  <input type="text" class="form-control form-control-sm" id="postSlug" name="postSlug" placeholder="Post Slug">
+                </div>
+
+                <div class="form-group">
+                  <label for="postMetaDescription">Post Meta Description</label>
+                  <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
+                  <input type="text" class="form-control form-control-sm" id="postMetaDescription" name="postMetaDescription" placeholder="Post Meta Description">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="postMetaCannonical">Post Meta Cannonical</label>
+                  <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
+                  <input type="text" class="form-control form-control-sm" id="postMetaCannonical" name="postMetaCannonical" placeholder="Post Meta Cannonical">
+                </div>
+
+
+              </div>
+            </div>
+            {{-- COl 1.4 --}}
+            <div class="col-sm-4">
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input form-control-sm" id="exampleCheck1" value="1" name="postStatus" checked>
+                    <label class="form-check-label" for="exampleCheck1">Publish</label>
+                  </div>
+    
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-check">
+                        <input type="checkbox" class="form-check-input form-control-sm" id="exampleCheck1" value="1" name="postRobotFollow" checked>
+                        <label class="form-check-label" for="exampleCheck1">Robot Follow</label>
+                      </div>
+                  
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-check">
+                        <input type="checkbox" class="form-check-input form-control-sm" id="exampleCheck1" value="1" name="postRobotIndex" checked>
+                        <label class="form-check-label" for="exampleCheck1">Robot Index</label>
+                      </div>
+                </div>
+              </div> 
+              
+
+              <div class="form-group">
                   <label for="postImage">File input</label>
                   <div class="input-group">
                     <div class="custom-file">
@@ -77,9 +118,10 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="form-group">
                   <label>Tags</label>
-                  <select name="postTag" class="form-control select2" multiple="multiple" data-placeholder="Select a State"
+                  <select name="postTag[]" class="form-control select2" multiple="multiple" data-placeholder="Select a State"
                           style="width: 100%;" multiple>
                     @foreach($tag as $tag)
                      <option value="{{$tag->tag_id}}">{{$tag->tag_title}}</option>
@@ -87,14 +129,9 @@
                   </select>
                 </div>  
 
-
-              </div>
-
-              <div class="col-sm-6">
-
-                <div class="form-group">
+                 <div class="form-group">
                   <label>Categories</label>
-                  <select name="postCategory" class="form-control select2" multiple="multiple" data-placeholder="Select a State"
+                  <select name="postCategory[]" class="form-control select2" multiple="multiple" data-placeholder="Select a State"
                           style="width: 100%;" multiple>
                     @foreach($category as $category)
                      <option value="{{$category->category_id}}">{{$category->category_title}}</option>
@@ -102,13 +139,22 @@
                   </select>
                 </div>  
 
-                <br/>
-                <br/>
+            </div>
+            {{-- ./Col 1.4 --}}
+          </div>
+          {{-- ./ROw 1 --}}
+
+            {{-- Row --}}
+            <div class="row">
+              
+              <div class="col-sm-6">
+
                 
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input form-control-sm" id="exampleCheck1" {{-- name="postStatus" --}} value="1" name="postStatus" checked>
-                  <label class="form-check-label" for="exampleCheck1">Publish</label>
-                </div>
+              </div>
+
+              <div class="col-sm-6">
+
+
 
               </div>
 
