@@ -4,7 +4,7 @@
   {{-- bootstrap wysihtml5 - text editor --}}
   <link rel="stylesheet" href="{{asset("/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css")}}">
   {{-- Ckeditor --}}
-  <script src="{{asset("/admin/addOn/ckeditor/ckeditor.js")}}"></script>
+  {{-- <script src="{{asset("/admin/addOn/ckeditor/ckeditor.js")}}"></script> --}}
 
 @endsection
 
@@ -82,7 +82,7 @@
           <div class="form-group">
             <label for="postTitle">Post Content</label>
             <i class="fa fa-check fa-bell-o fa-times-circle-o"></i>
-             <textarea  class="ckeditor" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="postData" placeholder="" value=""  disabled>{{$data['post']['0']['post_data']}}</textarea>
+             <textarea  class="textarea" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="postData" placeholder="" value=""  disabled>{{$data['post']['0']['post_data']}}</textarea>
           </div>
           {{-- ./Ckeditor --}}
 

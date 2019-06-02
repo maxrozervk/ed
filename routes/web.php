@@ -20,6 +20,11 @@
 /////////////////////////////////
 Route::get('/post-dashboard','AdminUser\DashboardController@postDashboard');
 Route::get('/admin-dashboard','AdminUser\DashboardController@adminDashboard');
+Route::get('/sitemap-create',function(){
+	return 'hi';
+});
+
+Route::get('/sitemap-generator','AdminUser\Sitemap\SitemapController@generator');
 
 // Route::get('/post-dashboard',function(){
 // 	return view('adminUserView.post.postDashboard');

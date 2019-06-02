@@ -21,7 +21,15 @@
  --}}
 @endsection
 @section('content')
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <a href="{{ asset('sitemap-generator') }}">
+        sitemap
+      </a>
+    </div>
+  </div>
+</div>
 @endsection
 
 @section('bodyScript')
